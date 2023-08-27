@@ -10,12 +10,13 @@ using namespace std;
 class Solution{
     int f(int index,int capacity,int val[],int wt[],vector<vector<int>>&dp)
     {
+        if(capacity==0)
+        return 0;
         if(index==0)
         {
             return (capacity/wt[0])*val[0];
         }
-        if(capacity==0)
-        return 0;
+        
         
         if(dp[index][capacity]!=-1)
         return dp[index][capacity];

@@ -7,8 +7,8 @@ using namespace std;
 class Solution {
   public:
     vector<int> maxCombinations(int N, int k, vector<int> &a, vector<int> &b) {
-    priority_queue<pair<int,pair<int,int>>> pq;  // {sum, (i,j)}
-    set<pair<int,int>> st; // {i,j}
+    priority_queue<pair<int,pair<int,int>>> pq;
+    set<pair<int,int>> st; 
     vector<int> ans;
     
     sort(a.begin(), a.end(), greater<int>());

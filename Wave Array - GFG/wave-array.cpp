@@ -13,12 +13,12 @@ class Solution{
     void convertToWave(int n, vector<int>& arr){
         if(n&1)
         {
-            for(int i=0;i<=n-3;i=i+2)
+            for(int i=0;i<n-2;i=i+2)
                 swap(arr[i],arr[i+1]);
         }
         else
         {
-            for(int i=0;i<=n-2;i=i+2)
+            for(int i=0;i<n-1;i=i+2)
             swap(arr[i],arr[i+1]);
             
         }

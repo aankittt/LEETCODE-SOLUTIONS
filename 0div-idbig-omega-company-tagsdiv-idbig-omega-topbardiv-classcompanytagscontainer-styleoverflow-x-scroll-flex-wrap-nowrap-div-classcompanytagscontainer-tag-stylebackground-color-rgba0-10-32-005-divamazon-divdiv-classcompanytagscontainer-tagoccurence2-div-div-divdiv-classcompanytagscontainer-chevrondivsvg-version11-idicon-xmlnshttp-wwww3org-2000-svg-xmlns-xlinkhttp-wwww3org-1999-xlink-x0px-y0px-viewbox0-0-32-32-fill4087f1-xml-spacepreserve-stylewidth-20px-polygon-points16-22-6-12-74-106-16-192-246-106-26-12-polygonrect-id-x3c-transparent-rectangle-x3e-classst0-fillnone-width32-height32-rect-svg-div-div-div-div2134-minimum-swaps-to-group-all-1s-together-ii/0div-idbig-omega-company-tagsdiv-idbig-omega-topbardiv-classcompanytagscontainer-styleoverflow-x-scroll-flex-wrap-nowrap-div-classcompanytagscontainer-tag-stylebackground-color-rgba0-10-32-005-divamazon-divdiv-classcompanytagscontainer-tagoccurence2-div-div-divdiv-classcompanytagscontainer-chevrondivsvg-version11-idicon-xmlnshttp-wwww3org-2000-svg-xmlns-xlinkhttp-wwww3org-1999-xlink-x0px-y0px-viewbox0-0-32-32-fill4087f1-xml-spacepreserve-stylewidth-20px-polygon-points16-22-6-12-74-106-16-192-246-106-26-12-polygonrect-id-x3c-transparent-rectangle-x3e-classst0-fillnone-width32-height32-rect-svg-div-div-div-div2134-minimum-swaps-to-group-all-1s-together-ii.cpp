@@ -2,10 +2,10 @@ class Solution {
 public:
     int minSwaps(vector<int>& nums) {
         
-        vector<int>chammo(nums.size()*2);
-        for(int i=0;i<chammo.size();i++)
+        vector<int>ankit(nums.size()*2);
+        for(int i=0;i<ankit.size();i++)
         {
-            chammo[i]=nums[i%nums.size()];
+            ankit[i]=nums[i%nums.size()];
         }
         int count1=0;
         for(auto it:nums)
@@ -24,15 +24,15 @@ public:
         int i=0;
         int j=count1-1;
         
-        while(j<chammo.size())
+        while(j<ankit.size())
         {
             ans=min(ans,count1-count);
             
-            if(chammo[i]==1)
+            if(ankit[i]==1)
                 count--;
             i++;
             j++;
-            if( j<chammo.size()&& chammo[j]==1)
+            if( j<ankit.size()&& ankit[j]==1)
                 count++;
         }
         return ans;
